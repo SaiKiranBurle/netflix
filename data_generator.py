@@ -12,10 +12,10 @@ def get_ratings_data():
     ratings_file = os.path.join(DATA_PATH, 'combined_ratings.csv')
     data = pandas.read_csv(ratings_file, sep=',', usecols=(0, 1, 2))
 
-    print("user id min/max: ", data['userId'].min(), data['userId'].max())
-    print "Number of unique users: {}".format(numpy.unique(data['userId']).shape[0])
-    print("movie id min/max: ", data['movieId'].min(), data['movieId'].max())
-    print "Number of unique movies: {}".format(numpy.unique(data['movieId']).shape[0])
+    # print("user id min/max: ", data['userId'].min(), data['userId'].max())
+    # print "Number of unique users: {}".format(numpy.unique(data['userId']).shape[0])
+    # print("movie id min/max: ", data['movieId'].min(), data['movieId'].max())
+    # print "Number of unique movies: {}".format(numpy.unique(data['movieId']).shape[0])
 
     data = data.sample(frac=1).reset_index(drop=True)  # Shuffle the data in place row-wise
 
